@@ -8,7 +8,7 @@
 
 /** Her name, shown with the animated letters on the opening screen and in the letter. */
 
-const herName = "unknown";
+const herName = "subhu";
 
 export const surprise = {
   herName,

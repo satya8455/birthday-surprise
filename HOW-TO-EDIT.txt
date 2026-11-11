@@ -1,0 +1,50 @@
+HOW TO EDIT YOUR BIRTHDAY SURPRISE  (plain JavaScript version)
+==============================================================
+
+Everything you need to change is in ONE file:  src/content/surprise.js
+The site is plain JavaScript now — no .ts or .tsx files anywhere in src/.
+
+1. INSTALL (one time)
+   - Install VS Code (free editor): https://code.visualstudio.com
+   - Install Node.js (LTS version): https://nodejs.org
+
+2. OPEN THE PROJECT
+   - Unzip this file.
+   - Open VS Code -> File -> Open Folder -> pick the unzipped folder.
+   - Open the Terminal in VS Code (Terminal -> New Terminal) and type:
+         npm install
+         npm run dev
+   - Open the link it shows (usually http://localhost:8080) in your browser.
+
+3. CHANGE THE TEXT
+   - Open the file:  src/content/surprise.js
+   - Replace "Her Name", "Your Name", the captions, the letter, the dates,
+     the stories and the final message. Keep the quote marks " " around text.
+   - Save (Ctrl+S). The browser updates by itself.
+
+4. ADD YOUR PHOTOS
+   - Copy your pictures into the folder:  public/photos/
+     Name them simply, e.g. 1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.jpg, 6.jpg
+   - In src/content/surprise.js change each memory like this:
+         { src: "/photos/1.jpg", caption: "Our first photo together" },
+   - Tip: shrink big phone photos (under ~1 MB each) so the site loads fast.
+
+5. ADD YOUR SONG (optional)
+   - Put an .mp3 in public/ (e.g. public/our-song.mp3)
+   - In surprise.js set:  musicUrl: "/our-song.mp3",
+
+6. PUT IT ONLINE (public link)
+   Easiest: you do NOT need GitHub. In Lovable, click "Publish" (top right)
+   and you get a public link to send her.
+
+   If you edit on your computer and want it online:
+   - Connect the project to GitHub from Lovable (Project settings -> Git).
+     Your edits pushed to GitHub come back into Lovable, then click Publish.
+   - Or host the GitHub repo yourself on Vercel / Netlify / Cloudflare Pages
+     (build command: npm run build).
+
+7. FILES YOU DO NOT NEED TO OPEN
+   - src/routeTree.gen.js  -> the page list, made automatically. Never edit it.
+   - route-tree-js.js      -> a tiny helper that keeps that page list plain JS.
+   - jsconfig.json         -> lets VS Code understand "@/..." imports.
+   Everything else under src/ is normal .js / .jsx code you can read and edit.
